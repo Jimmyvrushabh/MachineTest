@@ -1,68 +1,73 @@
-# 🚀 MachineTest
+# 🚀 MachineTest API Suite
 
-Welcome to **MachineTest** Round.
+Welcome to the **MachineTest** backend project – a powerful Spring Boot application designed for handling **Product** and **Category** operations through RESTful APIs.
 
-Springboot api round
-
----
-
-## 🌟 Features
-
-- 🔧 Robust and scalable Spring Boot backend  
-- ⚙️ Easy-to-configure and extendable modules  
-- 📦 Clean project structure for faster development  
-- 🚀 Ready to deploy with minimal setup
-
-
-# Important Project Requirements
-
-To ensure the project follows best practices and meets the goals, please keep in mind the following guidelines:
-
-- **A) Use Spring Boot**  
-  Develop the application using the Spring Boot framework for rapid setup and easy configuration.
-
-- **B) Use REST Controller**  
-  All APIs should be built using Spring’s `@RestController` annotation for creating RESTful web services.
-
-- **C) Database Configuration**  
-  Configure a **relational database (RDB)** such as MySQL or PostgreSQL instead of using in-memory databases like H2.  
-  Make sure to set up the database connection properly.
-
-- **D) Annotation-based Configuration**  
-  Use **annotation-based configuration** exclusively (e.g., `@Configuration`, `@Bean`, `@Entity`) instead of XML configuration files.
-
-- **E) JPA & Hibernate**  
-  Use **Java Persistence API (JPA)** with **Hibernate** as the implementation for ORM (Object Relational Mapping).
-
-- **F) Pagination**  
-  Implement pagination support for API endpoints that return lists of data (e.g., categories, products), enabling efficient data retrieval in pages.
+This project showcases a clean and scalable implementation using Spring Boot, JPA, Hibernate, and pagination — perfect for real-world enterprise use cases.
 
 ---
 
-Following these guidelines will help you build a clean, maintainable, and production-ready Spring Boot application.
+## 🧰 Tech Stack
 
+- **Spring Boot** – Rapid application development
+- **Spring Data JPA + Hibernate** – ORM & DB access
+- **MySQL/PostgreSQL** – Relational Database (RDB)
+- **RESTful API** – Clean, scalable HTTP endpoints
+- **Maven** – Build & Dependency Management
+- **Java 11+**
 
 ---
 
-## 🛠️ Getting Started
+## 🎯 Project Objectives
 
-Follow these simple steps to get your environment ready and run the project locally.
+| Requirement                 | Status     |
+|----------------------------|------------|
+| ✅ Spring Boot              | Implemented |
+| ✅ REST Controller          | Implemented |
+| ✅ Annotation Configuration | Implemented |
+| ✅ RDB Setup (Not H2)       | Configurable |
+| ✅ JPA & Hibernate ORM      | Enabled |
+| ✅ Pagination Support       | Added |
 
-### Prerequisites
+---
 
-Make sure you have these installed:
+## 📦 API Modules
 
-- Java JDK 11+  
-- Maven  
-- Git  
-- Your favorite IDE (IntelliJ IDEA, Eclipse, VS Code, etc.)
+### 📁 Category Module
+
+| Method | Endpoint                                       | Description              |
+|--------|------------------------------------------------|--------------------------|
+| GET    | `/api/categories?page=3`                       | Get all categories (paginated) |
+| POST   | `/api/categories`                              | Create a new category    |
+| GET    | `/api/categories/{id}`                         | Get category by ID       |
+| PUT    | `/api/categories/{id}`                         | Update category by ID    |
+| DELETE | `/api/categories/{id}`                         | Delete category by ID    |
 
 
-## API Endpoints
 
-**POST /api/products**
+
+### 📦 Product API Endpoints
+
+| Method | Endpoint                 | Description               |
+|--------|--------------------------|---------------------------|
+| GET    | `/api/products?page=2`   | Get all products (paginated) |
+| POST   | `/api/products`          | Create a new product      |
+| GET    | `/api/products/{id}`     | Get product by ID         |
+| PUT    | `/api/products/{id}`     | Update product by ID      |
+| DELETE | `/api/products/{id}`     | Delete product by ID      |
+
+
+#### 🧪 Sample Category JSON
 
 ```json
+{
+  "categoryName": "Footwear"
+}
+
+
+
+####🧪 Sample Product JSON
+```json
+
 {
   "pname": "iPhone 147 Pro",
   "pdescription": "Latest iPhone with A17 chip and titanium design",
@@ -73,50 +78,15 @@ Make sure you have these installed:
   "categoryName": "tshirt"
 }
 
-Category -->
-{
-  "categoryName": "Footwear"
-}
 
-
-
-### Category CRUD Operations
-
-| No. | Endpoint                               | HTTP Method | Description              | Notes             |
-|------|--------------------------------------|-------------|--------------------------|-------------------|
-| 1    | `http://localhost:8080/api/categories?page=3` | GET         | Get all categories (paged) | `page=3` means 3rd page |
-| 2    | `http://localhost:8080/api/categories`          | POST        | Create a new category    |                   |
-| 3    | `http://localhost:8080/api/categories/{id}`     | GET         | Get category by ID       | Replace `{id}` with actual category ID |
-| 4    | `http://localhost:8080/api/categories/{id}`     | PUT         | Update category by ID    |                   |
-| 5    | `http://localhost:8080/api/categories/{id}`     | DELETE      | Delete category by ID    |                   |
 
 ---
 
-### Product CRUD Operations
+## 📬 Contact
 
-| No. | Endpoint                              | HTTP Method | Description             | Notes             |
-|------|-------------------------------------|-------------|-------------------------|-------------------|
-| 1    | `http://localhost:8080/api/products?page=2` | GET         | Get all products (paged) | `page=2` means 2nd page |
-| 2    | `http://localhost:8080/api/products`         | POST        | Create a new product    |                   |
-| 3    | `http://localhost:8080/api/products/{id}`    | GET         | Get product by ID       | Replace `{id}` with actual product ID |
-| 4    | `http://localhost:8080/api/products/{id}`    | PUT         | Update product by ID    |                   |
-| 5    | `http://localhost:8080/api/products/{id}`    | DELETE      | Delete product by ID    |                   |
+👨‍💻 **Vrushabh C**
 
+- ✉️ **Email**: [vrushabhc1234@gmail.com](mailto:vrushabhc1234@gmail.com)
+- 🔗 **GitHub**: [github.com/Jimmyvrushabh](https://github.com/Jimmyvrushabh)
 
-
-
-### Installation
-
-1. **Clone the repo:**
-
-   ```bash
-   git clone https://github.com/Jimmyvrushabh/MachineTest.git
-
-  ### 📬 Get In Touch
-
-Questions? Feedback? Want to collaborate? Reach out to me:
-
-**Vrushabh C**  
-Email: [vrushabhc1234@gmail.com](mailto:vrushabhc1234@gmail.com)  
-GitHub: [https://github.com/Jimmyvrushabh](https://github.com/Jimmyvrushabh)
-
+Feel free to reach out for collaboration, suggestions, or just to say hello! 😊
