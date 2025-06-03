@@ -39,7 +39,7 @@ public class ProductController {
 
 		
 		@Operation(summary = "Get ALL products", description = "Get All Products Using pagination with page and size parameters")
-		@GetMapping("/product")
+		@GetMapping("/products")
 		public ResponseEntity<List<ResponseProduct>> getAllProduct(
 		        @RequestParam int page,
 		        @RequestParam(defaultValue = "1") int size) {
